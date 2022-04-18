@@ -15,3 +15,7 @@ After the installation the coligo.py and intetra.py scripts should be executable
 
 ## EXAMPLE
 `rename_fasta -i <inputdirectory>`
+
+## REQIREMENTS
+  python3.6
+  biopython
