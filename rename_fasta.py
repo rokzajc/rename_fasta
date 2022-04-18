@@ -19,7 +19,7 @@ def main():
         if fnmatch.fnmatch(file, '*.fna') or fnmatch.fnmatch(file, '*.fasta'):
             with open(os.path.join(os.getcwd(),input_mapa,file)) as f:
                 for contig in SeqIO.parse(f, "fasta"):
-                    sequence_name=re.split('[.]\d |str[.]|strain|[.] |complete|genome|sequence| |\d* bp|,|/|chromosome',contig.description)
+                    sequence_name=re.split('[.]\d |str[.]|strain|[.] |complete|genome|sequence| |\d* bp|,|/|chromosome|whole|shotgun',contig.description)
                     for i in range(sequence_name.count('')):
                         sequence_name.remove('')
                     if len(sequence_name)>3:
